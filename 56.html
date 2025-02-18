@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>智慧养老药物配送体系</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+  .delivery-info {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+  .delivery-info h2 {
+      margin-top: 0;
+    }
+
+  .delivery-info p {
+      margin: 10px 0;
+    }
+
+  .order-form {
+      border: 1px solid #ddd;
+      padding: 20px;
+    }
+
+  .order-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+  .order-form input,
+  .order-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+  .order-form button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>智慧养老药物配送体系</h1>
+    <nav>
+      <ul>
+      	<li><a
+      	href="introduction.html">首页</a></li>
+        <li><a href="#">订单查询</a></li>
+        <li><a href="#">个人中心</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="delivery-info">
+      <h2>配送信息</h2>
+      <p>我们提供快速、准确、贴心的药物配送服务，确保您的健康需求得到及时满足。</p >
+    </div>
+    <div class="order-form">
+      <h2>下单表单</h2>
+      <label for="patient-name">患者姓名：</label>
+      <input type="text" id="patient-name">
+      <label for="medication-type">药品类型：</label>
+      <select id="medication-type" onchange="showSubMedications()">
+        <option value="降压药">降压药</option>
+        <option value="抗心绞痛药物">抗心绞痛药物</option>
+        <option value="抗血栓药物">抗血栓药物</option>
+        <option value="降糖药">降糖药</option>
+        <option value="老年痴呆治疗药物">老年痴呆治疗药物</option>
+        <option value="解热镇痛药">解热镇痛药</option>
+         <option value="慢性支气管炎用药">慢性支气管炎用药</option>
+        <option value="助消化药">助消化药</option>
+        <option value="骨质疏松药物">骨质疏松药物</option>
+        <option value="镇静催眠药">镇静催眠药</option>
+        <option value="抗过敏药">抗过敏药</option>
+        <option value="微生态制剂">微生态制剂</option>
+      </select>
+      <label for="medication-name">药品名称：</label>
+      <select id="medication-name">
+      </select>
+      <label for="delivery-address">配送地址：</label>
+      <input type="text" id="delivery-address">
+      <label for="delivery-time">期望配送时间：</label>
+         <select id="delivery-time">
+        <option value="00:00 - 02:00">00:00 - 02:00</option>
+        <option value="02:00 - 04:00">02:00 - 04:00</option>
+        <option value="04:00 - 06:00">04:00 - 06:00</option>
+        <option value="06:00 - 08:00">06:00 - 08:00</option>
+        <option value="08:00 - 10:00">08:00 - 10:00</option>
+        <option value="10:00 - 12:00">10:00 - 12:00</option>
+        <option value="12:00 - 14:00">12:00 - 14:00</option>
+        <option value="14:00 - 16:00">14:00 - 16:00</option>
+        <option value="16:00 - 18:00">16:00 - 18:00</option>
+        <option value="18:00 - 20:00">16:00 - 18:00</option>
+        <option value="20:00 - 22:00">16:00 - 18:00</option>
+      </select>
+      <button onclick="submitOrder()">提交订单</button>
+    </div>
+  </main>
+  <footer>
+    &copy; 2023 智慧养老药物配送  联系我们：123456789
+  </footer>
+
+  <script>
+    function showSubMedications() {
+      var type = document.getElementById("medication-type").value;
+      var medicationNameSelect = document.getElementById("medication-name");
+      medicationNameSelect.innerHTML = "";
+
+      if (type === "降压药") {
+        var options = ["ACE抑制剂", "氨氯地平", "美托洛尔片"];
+      } else if (type === "抗心绞痛药物") {
+        var options = ["硝酸甘油", "速效救心丸"];
+      } else if (type === "抗血栓药物") {
+        var options = ["华法林"];
+      }else if (type === "抗血栓药物") {
+        var options = ["硝酸甘油", "速效救心丸"];
+      } else if (type === "降糖药") {
+        var options = ["胰岛素", "口服降糖药"];
+      } else if (type === "老年痴呆治疗药物") {
+        var options = ["卡巴拉丁", "盐酸美金刚"];
+      } else if (type === "解热镇痛药") {
+        var options = ["氟西仃", "帕罗西丁"];
+      } else if (type === "慢性支气管炎用药") {
+        var options = ["氨溴索", "沙丁胺醇"];
+      } else if (type === "助消化药") {
+        var options = ["胰酶片", "多潘立酮"];
+      } else if (type === "骨质疏松药物") {
+        var options = ["钙剂", "维生素D"];
+      } else if (type === "镇静催眠药") {
+        var options = ["地西泮"];
+      } else if (type === "抗过敏药") {
+        var options = ["皮尔敏"];
+      } else if (type === "微生态制剂") {
+        var options = ["双歧杆菌"];
+      } 
+
+      for (var i = 0; i < options.length; i++) {
+        var option = document.createElement("option");
+        option.value = options[i];
+        option.text = options[i];
+        medicationNameSelect.appendChild(option);
+      }
+    }
+
+    function submitOrder() {
+      window.location.href = "next_page.html";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>无人机药品配送</title>
+  <!-- 引入Bootstrap CSS -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+   .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+   .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('drone-bg.png') center/cover;
+      height: 80vh;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+   .hero-section h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 0.2rem;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+   .hero-section p {
+      font-size: 1.5rem;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+   .feature-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+   .service-card {
+      transition: transform 0.3s;
+    }
+
+   .service-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href=" ">
+        <img src="logo.png" alt="医航配送" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="56.html" id="orderBtn">立即下单</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#profile">个人中心</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#orders">订单查询</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体内容 -->
+  <main>
+    <!-- 首屏展示 -->
+    <section class="hero-section">
+      <div class="container text-center">
+        <h1 class="display-4 mb-4">无人机紧急药品配送服务</h1>
+        <p class="lead mb-4">24 小时全天候服务 | 最快 30 分钟送达 | 全程冷链运输</p>
+        <a href="56.html" class="btn btn-outline-light btn-lg">立即下单</a>
+      </div>
+    </section>
+
+    <!-- 服务特色 -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 service-card">
+              <div class="card-body text-center">
+                <img src="clock-icon.png" alt="快速" class="feature-icon">
+                <h3>极速送达</h3>
+                <p>无人机直线配送，突破地形限制，紧急药品优先派送</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 service-card">
+              <div class="card-body text-center">
+                <img src="clock-icon.png" alt="安全" class="feature-icon">
+                <h3>专业运输</h3>
+                <p>恒温药品仓，全程 GPS 追踪，专业医疗团队支持</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 service-card">
+              <div class="card-body text-center">
+                <img src="clock-icon.png" alt="智能" class="feature-icon">
+                <h3>智能调度</h3>
+                <p>AI 路径规划，实时气象监测，自动避障系统</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-light py-4">
+    <div class="container text-center">
+      <p>&copy; 2023 医航无人机配送服务</p>
+      <p>急救热线：120 | 服务时间：全年无休</p>
+    </div>
+  </footer>
+
+  <!-- 引入Bootstrap JS -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
